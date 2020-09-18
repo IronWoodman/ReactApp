@@ -11,17 +11,16 @@ module.exports = function override(config, env) {
     //     new CopyWebpackPlugin([{from: 'src/lib/legacyLib.js', to: 'dist'}])
     // );
 
-    plugins: [
+    config.plugins.push(
         new CopyPlugin({
           patterns: [
-            { from: 'source', to: 'dest' },
-            { from: 'other', to: 'public' },
+            { from: 'myFiles', to: 'static' },
           ],
           options: {
             concurrency: 100,
           },
         }),
-    ]
+    );
 
     return config;
 }
