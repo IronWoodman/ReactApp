@@ -14,7 +14,7 @@ module.exports = function override(config, env) {
     config.plugins.push(
         new CopyPlugin({
           patterns: [
-            { from: 'myFiles', to: 'static' },
+            { from: 'osrm', to: 'static' },
           ],
           options: {
             concurrency: 100,
